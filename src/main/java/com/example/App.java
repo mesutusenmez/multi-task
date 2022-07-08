@@ -10,10 +10,7 @@ import java.util.concurrent.Future;
 
 import com.example.Profile.ProfileBuilder;
 
-/**
- * Hello world!
- *
- */
+
 public class App {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();

@@ -2,6 +2,10 @@ package com.example;
 
 import java.util.concurrent.Callable;
 
+/**
+ * Assume a callable service that get the name of the user from DB.
+ * 
+ */
 public class UserService implements Callable<Profile> {
 
     User user;

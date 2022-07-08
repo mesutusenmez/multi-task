@@ -2,6 +2,10 @@ package com.example;
 
 import java.util.concurrent.Callable;
 
+/**
+ * Assume a callable service that get the phone number of the user from DB.
+ * 
+ */
 public class PhoneService implements Callable<Profile> {
 
     Long userId;
