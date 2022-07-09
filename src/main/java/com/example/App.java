@@ -26,10 +26,10 @@ public class App {
         ProfileBuilder profileBuilder = new ProfileBuilder();
 
         try {
-            List<Future<Profile>> profiles = executorService.invokeAll(tasks);
+            List<Future<Profile>> profileParts = executorService.invokeAll(tasks);
 
-            for (Future<Profile> p : profiles) {
-                profileBuilder.user(p.get().getUser()).phoneNumber(p.get().getPhoneNumber()); 
+            for (Future<Profile> profilePart : profileParts) {
+                profileBuilder.user(profilePart.get().getUser()).phoneNumber(profilePart.get().getPhoneNumber()); 
             }
 
             Profile profile = profileBuilder.build();
